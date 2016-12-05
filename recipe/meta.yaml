@@ -7,7 +7,7 @@ package:
 source:
   fn: toolz-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/t/toolz/toolz-{{ version }}.tar.gz
-  md5: f3b60d62bd3906fe1881b748c9ee82a1
+  sha256: b3922e3545e892b4aeac5c20ea19fef75b3dfe366f1f2fcea941b3c836b3c160
 
 build:
   number: 0
