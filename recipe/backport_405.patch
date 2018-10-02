@@ -1,0 +1,11 @@
+--- toolz-0.9.0.orig/toolz/functoolz.py	2017-12-17 03:16:26.000000000 -0200
++++ toolz-0.9.0/toolz/functoolz.py	2018-10-02 11:01:37.279965838 -0300
+@@ -498,7 +498,7 @@
+     def __name__(self):
+         try:
+             return '_of_'.join(
+-                f.__name__ for f in reversed((self.first,) + self.funcs)
++                (f.__name__ for f in reversed((self.first,) + self.funcs))
+             )
+         except AttributeError:
+             return type(self).__name__
