@@ -7,9 +7,6 @@ package:
 source:
   url: https://pypi.io/packages/source/t/toolz/toolz-{{ version }}.tar.gz
   sha256: 08fdd5ef7c96480ad11c12d472de21acd32359996f69a5259299b540feba4560
-  patches:
-    # https://github.com/pytoolz/toolz/pull/405
-    - backport_405.patch
 
 build:
   number: 0
