@@ -29,7 +29,7 @@ test:
 
 about:
   home: http://toolz.readthedocs.org/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: A functional standard library for Python
 
