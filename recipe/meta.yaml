@@ -1,4 +1,4 @@
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: toolz
@@ -6,19 +6,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/toolz/toolz-{{ version }}.tar.gz
-  sha256: 08fdd5ef7c96480ad11c12d472de21acd32359996f69a5259299b540feba4560
+  sha256: 39701a4c1ed9498e9d4847bb52181807b9f90c598ee9dd5ed27b0f4c007a595a
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
 
 test:
   imports:
@@ -29,7 +29,7 @@ test:
 
 about:
   home: http://toolz.readthedocs.org/
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: A functional standard library for Python
 
