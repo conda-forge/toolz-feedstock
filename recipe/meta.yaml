@@ -1,5 +1,5 @@
 {% set name = "toolz" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/toolz-{{ version }}.tar.gz
-  sha256: 2c86e3d9a04798ac556793bced838816296a2f085017664e4995cb40a1047a02
+  sha256: 27a5c770d068c110d9ed9323f24f1543e83b2f300a687b7891c1a6d56b697b5b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
