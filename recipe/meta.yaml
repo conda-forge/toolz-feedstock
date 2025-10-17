@@ -12,12 +12,13 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools
+    - setuptools >=77
+    - setuptools-git-versioning >=2.0
     - pip
   run:
     - python >={{ python_min }}
@@ -31,6 +32,7 @@ test:
     - toolz.sandbox
   commands:
     - pip check
+    - 'python -c "import toolz; assert toolz.__version__ != ''0.0.0''"'
   requires:
     - pip
     - python {{ python_min }}
