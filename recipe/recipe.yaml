@@ -1,0 +1,48 @@
+schema_version: 1
+context:
+  name: toolz
+  version: 1.1.0
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 27a5c770d068c110d9ed9323f24f1543e83b2f300a687b7891c1a6d56b697b5b
+build:
+  number: 2
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  noarch: python
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=77
+    - setuptools-git-versioning >=2.0
+    - pip
+  run:
+    - python >=${{ python_min }}
+tests:
+  - python:
+      python_version: ${{ python_min }}.*
+      imports:
+        - tlz
+        - toolz
+        - toolz.curried
+        - toolz.functoolz
+        - toolz.sandbox
+      pip_check: true
+  - script:
+      - python -c "import toolz; assert toolz.__version__ != '0.0.0'"
+about:
+  homepage: https://toolz.readthedocs.org/
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
+  summary: A functional standard library for Python
+extra:
+  recipe-maintainers:
+    - hendrikmakait
+    - jrbourbeau
+    - mrocklin
+    - eriknw
+    - jcrist
+    - jakirkham
+    - ocefpaf
