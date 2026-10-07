@@ -3,11 +3,11 @@ About toolz-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/toolz-feedstock/blob/main/LICENSE.txt)
 
-Home: https://toolz.readthedocs.org/
+Home: https://pypi.org/project/toolz/
 
 Package license: BSD-3-Clause
 
-Summary: A functional standard library for Python
+Summary: List processing tools and functional utilities
 
 Current build status
 ====================
